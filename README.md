@@ -7,13 +7,13 @@ Soundcloud App requires:
 
 * [PostgreSQL](https://www.postgresql.org/) version 9.5.4 or higher
 * [Rails](http://rubyonrails.org/) version 5.0.0 or higher
-* [Redis](http://redis.io/) version 3.2.3 or higher 
+* [Redis](http://redis.io/) version 3.2.3 or higher
 * [Ruby](http://www.ruby-lang.org/) version 2.3.0 or higher
 
 Soundcloud App uses a number of open source projects to work properly:
 
 * [Devise](https://github.com/plataformatec/devise) - flexible authentication solution for Rails based on Warden
-* [Dragonfly](https://github.com/markevans/dragonfly) - highly customizable ruby gem for handling images and other attachments 
+* [Dragonfly](https://github.com/markevans/dragonfly) - highly customizable ruby gem for handling images and other attachments
 * [jQuery] - duh
 * [node.js] - evented I/O for the backend
 * [Sidekiq](https://github.com/mperham/sidekiq) - simple, efficient background processing for Ruby
@@ -88,31 +88,31 @@ createuser --interactive
     sudo apt-get install build-essential tcl
     ```
     Now, download the latest stable version of Redis. This is always available at a stable [download URL](http://download.redis.io/redis-stable.tar.gz):
-    
+
     ```sh
     curl -O http://download.redis.io/redis-stable.tar.gz
     ```
-    
+
     Unpack the tarball by typing:
-    
+
     ```sh
     tar xzvf redis-stable.tar.gz
     ```
-    
+
     Move into the Redis source directory structure that was just extracted:
 
     ```sh
     cd redis-stable
     ```
-    
+
     Now, we can compile the Redis binaries and run the test suite to make sure everything was built correctly by typing:
-    
+
     ```sh
     make && make test
     ```
-    
+
     This will typically take a few minutes to run. Once it is complete, you can install the binaries onto the system by typing:
-    
+
     ```sh
     sudo make install
     ```
@@ -122,7 +122,7 @@ createuser --interactive
 Clone the application on your local computer by running the following command in your Terminal:
 
 ```sh
- git clone git!!!!!! project_name
+ git clone git@github.com:Andry75/Soundcloud_App.git project_name
 ```
 
 ## Register a new SoundCloud application
