@@ -1,0 +1,11 @@
+.playlist
+  .thumbnail
+    -if playlist.artwork.present?
+      = image_tag (playlist.artwork.thumb('100x100').url) 
+      /
+    -else
+      = image_tag 'playlist.jpg'
+    .caption
+      h4 = playlist.title
+      p
+        = link_to 'Contents', playlist, class: 'btn btn-primary'

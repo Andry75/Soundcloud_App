@@ -1,0 +1,11 @@
+.track
+  .thumbnail
+    -if track.artwork.present?
+      = image_tag (track.artwork.thumb('100x100').url)
+       /
+    -else
+      = image_tag 'track.jpg'
+    .caption
+      h4 = track.stylized_title
+      p
+        a.btn.btn-primary href="#" role="button"  Кнопка

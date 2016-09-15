@@ -1,0 +1,15 @@
+  .col-sm-7.col-md-5.col-lg-5.col-lg-offset-1.col-md-offset-1
+    .panel.panel-primary
+      .panel-heading
+        h3.panel-title
+          |SoundCloud profile
+      .panel-body
+        form.form-horizontal role="form" 
+          .form-group
+            label.col-sm-3.control-label Login
+            .col-sm-9
+              p.form-control-static = current_user.login
+          .form-group
+            label.col-sm-3.control-label ID
+            .col-sm-9
+              p.form-control-static = current_user.soundcloud_user_id

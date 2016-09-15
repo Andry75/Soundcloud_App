@@ -1,0 +1,8 @@
+.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+  h1.page-header SoundCloud Status
+
+  -if current_user.soundcloud_connected?
+    = render '/soundcloud/connected'
+    = render '/layouts/back'
+  -else
+    = render '/soundcloud/connect'

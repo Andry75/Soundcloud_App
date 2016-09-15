@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: SC_development
+  pool: 5
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: SC_test
+  pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: SC_production
+  pool: 5
+  username: <%= ENV['SC_DATABASE_USERNAME'] %>
+  password: <%= ENV['SC_DATABASE_PASSWORD'] %>

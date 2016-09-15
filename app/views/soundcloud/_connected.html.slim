@@ -1,0 +1,25 @@
+    .panel.panel-info
+      .panel-heading
+        h3.panel-title
+          |SoundCloud ID
+      .panel-body
+        = current_user.soundcloud_user_id
+    .panel.panel-info
+      .panel-heading
+        h3.panel-title
+          |Last sync date:
+      .panel-body
+        = last_sync_date(current_user)
+    .panel.panel-info
+      .panel-heading
+        h3.panel-title
+          |Tracks count:
+      .panel-body
+        = current_user.tracks.count
+    .panel.panel-info
+      .panel-heading
+        h3.panel-title
+          |Plalists count:
+      .panel-body
+        = current_user.playlists.count
+    = link_to 'Sync now!', soundcloud_sync_path, class: 'btn btn-primary btn-lg btn-block'

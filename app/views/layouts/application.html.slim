@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title 
+      |Soundcloud APP
+    - if user_signed_in? 
+      == stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    -else
+      == stylesheet_link_tag    'sign_in_page', media: 'all', 'data-turbolinks-track' => true
+    == javascript_include_tag 'application', 'data-turbolinks-track' => true
+    == csrf_meta_tags
+  body
+  - if user_signed_in?
+    = render 'layouts/header'
+    .container-fluid
+      .row
+        =render 'layouts/sidebar'
+        = render 'layouts/flash_messages'
+        = yield
+      = render 'layouts/footer'
+
+  -else
+    = yield

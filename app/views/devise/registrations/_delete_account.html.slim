@@ -1,0 +1,17 @@
+.col-sm-7.col-md-5.col-lg-5.col-lg-offset-1.col-md-offset-1
+  .panel.panel-danger
+      .panel-heading
+        h3.panel-title
+          |Delete Account
+      .panel-body
+        -if current_user.soundcloud_connected?
+          p.text-center
+            strong
+              |If you disconnect your Soundcloud profile all synchronized data will be deleted. After disconnecting Soundcloud profile, you can plug it in again.
+          p.text-center
+            = link_to 'Disconnect Soundcloud profile', soundcloud_disconnect_path, class: 'btn btn-danger'
+        p.text-center
+          strong
+            |This will delete your profile forever!!
+        p.text-center
+           = link_to 'Delete Account', current_user, class: 'btn btn-danger', method: 'delete'

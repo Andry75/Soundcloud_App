@@ -1,0 +1,20 @@
+.col-sm-3.col-md-2.sidebar
+  .row.placeholders
+      .col-sm-12.col-md-12.placeholder
+        = image_tag (current_user.avatar.thumb('400x400').url), class: 'img-responsive' if current_user.avatar.present?
+        h4 
+          = link_to current_user.login_or_email, edit_user_registration_path
+
+  ul.nav.nav-sidebar
+    li
+      = link_to 'Home', root_path
+    li
+      = link_to 'Soundcloud status', status_path
+    li
+      = link_to 'Tracks', tracks_path
+    li
+      = link_to 'Playlists', playlists_path
+
+  ul.nav.nav-sidebar
+    li 
+      = link_to "Sign out", destroy_user_session_path, method: "delete"

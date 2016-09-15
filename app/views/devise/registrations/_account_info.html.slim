@@ -1,0 +1,23 @@
+.col-sm-7.col-md-5.col-lg-5
+  .panel.panel-primary
+      .panel-heading
+        h3.panel-title
+          |Your Account
+      .panel-body
+        form.form-horizontal role="form" 
+          .form-group
+            label.col-sm-3.control-label Email
+            .col-sm-9
+              p.form-control-static = current_user.email
+          .form-group
+            label.col-sm-3.control-label Created at
+            .col-sm-9
+              p.form-control-static = current_user.created_at
+          .form-group
+            label.col-sm-3.control-label Last sign in at
+            .col-sm-9
+              p.form-control-static = current_user.last_sign_in_at
+          .form-group
+            label.col-sm-3.control-label Last sign in IP address
+            .col-sm-9
+              p.form-control-static = current_user.last_sign_in_ip
